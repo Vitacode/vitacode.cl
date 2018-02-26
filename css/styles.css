@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url('../fonts/OpenSans-Semibold.ttf');
+}
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url('../fonts/OpenSans-ExtraBold.ttf');
+}
+/* =============================================================================
+   Screen size variables
+   ========================================================================== */
+/* =============================================================================
+   Media queries for different screen sizes
+   ========================================================================== */
+.bg-rojo {
+  background-color: #be0811;
+}
+.bg-negro {
+  background-color: #000000;
+}
+.bg-blanco {
+  background-color: #ffffff;
+}
+.bg-turquesa {
+  background-color: #0aa2ba;
+}
+.rojo {
+  color: #be0811;
+}
+.negro {
+  color: #000000;
+}
+.blanco {
+  color: #ffffff;
+}
+.turquesa {
+  color: #0aa2ba;
+}
+.gris {
+  color: rgba(255, 255, 255, 0.6);
+}
+body {
+  background-color: #eeeeee;
+  min-width: 410px;
+  font-family: OpenSansRegular;
+}
+.bold,
+strong {
+  font-family: OpenSansBold;
+}
+a.btn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: OpenSansBold;
+  font-size: 20px;
+}
+a.btn.btn-info {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.6);
+  border-color: #ffffff;
+}
+a.btn.btn-info:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #be0811;
+}
+a.btn.btn-danger {
+  background-color: #be0811;
+  color: #ffffff;
+  border-color: #be0811;
+}
+a.btn.btn-danger:hover {
+  color: #0aa2ba;
+  border-color: #0aa2ba;
+  background-color: #ffffff;
+}
+.social-icons {
+  text-align: right;
+}
+.social-icons i {
+  color: #be0811;
+  background-color: #ffffff;
+  padding: 5px;
+  margin: 6px 3px;
+  border-radius: 8px;
+  font-size: 20px;
+  min-width: 35px;
+  min-height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+}
+#menu-bar .navbar-brand .text-hide {
+  background-image: url(../img/logo-vitacode-400.png);
+  width: 350px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 992px) {
+  #menu-bar a.store {
+    color: #ffffff !important;
+    background-color: #0aa2ba !important;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 18px;
+  }
+  #menu-bar a.store:hover {
+    color: #ffffff !important;
+    background-color: #be0811 !important;
+  }
+}
+@media (max-width: 991px) {
+  #menu-bar a.store {
+    color: #0aa2ba !important;
+    text-transform: uppercase;
+    font-family: OpenSansBold;
+  }
+  #menu-bar a.store:hover {
+    color: #be0811 !important;
+  }
+}
+#que .fa-question-circle {
+  position: relative;
+  left: -50px;
+  top: 50px;
+}
+#tips {
+  background-image: url(' ../img/qrbackground.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#tips div.fa {
+  color: #be0811;
+  font-size: 80px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+#tips h2,
+#tips h3,
+#tips p {
+  color: #ffffff;
+}
+#tips h2 {
+  font-family: OpenSansBold;
+  padding-bottom: 40px;
+  padding-top: 50px;
+}
+#tips h3 {
+  font-family: OpenSansBold;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+#tips p {
+  padding: 10px 25px;
+}
+#tips #video-background {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-width: 90%;
+  min-height: 90%;
+  width: 90%;
+  height: auto;
+  z-index: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+#tips #cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 560px;
+  height: auto;
+  z-index: 999;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+}
+#ejemplo .fa {
+  padding-bottom: 15px;
+}
+#ejemplo hr {
+  background-color: #0aa2ba;
+  border-top: 6px solid #0aa2ba;
+  width: 40%;
+  float: left;
+}
+@media (min-width: 992px) {
+  #ejemplo h2 {
+    margin-left: 100px !important;
+  }
+}
+#ejemplo a.demo {
+  color: #ffffff;
+}
+#ejemplo a.demo:hover {
+  color: #0aa2ba;
+  text-decoration: none;
+  font-family: OpenSansBold;
+}
+footer {
+  padding-top: 50px;
+}
+footer p {
+  font-size: 14px;
+}

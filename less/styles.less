@@ -1,0 +1,357 @@
+//Font faces
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+	font-family: "OpenSansLight";
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+	font-family: "OpenSansBold";
+	src: url('../fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+	font-family: "OpenSansSemibold";
+	src: url('../fonts/OpenSans-Semibold.ttf');
+}
+@font-face {
+	font-family: "OpenSansExtraBold";
+	src: url('../fonts/OpenSans-ExtraBold.ttf');
+}
+
+//MEDIA QUIERIES
+/* =============================================================================
+   Screen size variables
+   ========================================================================== */
+
+   @screen-xs:                        480px;
+   @screen-xs-min:                    @screen-xs;
+   @screen-sm:                        768px;
+   @screen-sm-min:                    @screen-sm;
+   @screen-md:                        992px;
+   @screen-md-min:                    @screen-md;
+   @screen-lg:                        1200px;
+   @screen-lg-min:                    @screen-lg;
+   @screen-xl:                        1600px;
+   @screen-xl-min:                    @screen-xl;
+   @screen-xs-max:                    ( @screen-sm-min - 1 );
+   @screen-sm-max:                    ( @screen-md-min - 1 );
+   @screen-md-max:                    ( @screen-lg-min - 1 );
+   @screen-lg-max:                    ( @screen-xl-min - 1 );
+
+/* =============================================================================
+   Media queries for different screen sizes
+   ========================================================================== */
+
+// xs only
+.screen-xs(@rules) {
+	@media (max-width: @screen-xs-max) { @rules(); }
+}
+
+// sm and larger
+.screen-sm-min(@rules) {
+	@media (min-width: @screen-sm-min) { @rules(); }
+}
+
+// sm only
+.screen-sm(@rules) {
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { @rules(); }
+}
+
+// sm and smaller
+.screen-sm-max(@rules) {
+	@media (max-width: @screen-sm-max) { @rules(); }
+}
+
+// md and larger
+.screen-md-min(@rules) {
+	@media (min-width: @screen-md-min) { @rules(); }
+}
+
+// md only
+.screen-md(@rules) {
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { @rules(); }
+}
+
+// md and smaller
+.screen-md-max(@rules) {
+	@media (max-width: @screen-md-max) { @rules(); }
+}
+
+// lg and larger
+.screen-lg-min(@rules) {
+	@media (min-width: @screen-lg-min) { @rules(); }
+}
+
+// lg only
+.screen-lg(@rules) {
+	@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) { @rules(); }
+}
+
+// lg and smaller
+.screen-lg-max(@rules) {
+	@media (max-width: @screen-lg-max) { @rules(); }
+}
+
+// xl and larger
+.screen-xl(@rules) {
+	@media (min-width: @screen-xl-min) { @rules(); }
+}
+
+// 1: xs only, 2: sm and larger
+.screen(@rules-xs, @rules-sm) {
+	.screen-xs(@rules-xs);
+	.screen-sm-min(@rules-sm);
+}
+
+// 1: xs only, 2: sm only, 3: md and larger
+.screen(@rules-xs, @rules-sm, @rules-md) {
+	.screen-xs(@rules-xs);
+	.screen-sm(@rules-sm);
+	.screen-md-min(@rules-md);
+}
+
+// 1: xs only, 2: sm only, 3: md only, 4: lg and larger
+.screen(@rules-xs, @rules-sm, @rules-md, @rules-lg) {
+	.screen-xs(@rules-xs);
+	.screen-sm(@rules-sm);
+	.screen-md(@rules-md);
+	.screen-lg-min(@rules-lg);
+}
+
+// 1: xs only, 2: sm only, 3: md only, 4: lg only, 5: xl and larger
+.screen(@rules-xs, @rules-sm, @rules-md, @rules-lg, @rules-xl) {
+	.screen-xs(@rules-xs);
+	.screen-sm(@rules-sm);
+	.screen-md(@rules-md);
+	.screen-lg(@rules-lg);
+	.screen-xl(@rules-xl);
+}
+
+
+//COLOR
+// Paleta de colores
+@Rojo: #be0811;
+@Negro: #000; 
+@Blanco: #fff;
+@Turquesa: #0aa2ba;
+@DarkGray: rgba(0,0,0,.6);
+@Footer: rgba(255,255,255,.6);
+@LightGray: #eee;
+
+//Clases para color:
+//Backgrounds
+.bg-rojo {
+	background-color: @Rojo;
+}
+.bg-negro {
+	background-color: @Negro;
+}
+.bg-blanco {
+	background-color: @Blanco;
+}
+.bg-turquesa {
+	background-color: @Turquesa;
+}
+//Frente
+.rojo {
+	color: @Rojo;
+}
+.negro {
+	color: @Negro;
+}
+.blanco {
+	color: @Blanco;
+}
+.turquesa {
+	color: @Turquesa;
+}
+.gris {
+	color: @Footer;
+}
+
+//CUERPO
+//Body
+body {
+	background-color: @LightGray;
+	min-width: 410px;
+	font-family: OpenSansRegular;
+}
+
+//Typos
+.bold, strong {
+	font-family: OpenSansBold;
+} 
+
+//Botones
+a.btn {
+	&.btn-info  {
+		background-color: @Blanco;
+		color: @DarkGray;
+		border-color: @Blanco;
+		&:hover {
+			color: @Blanco;
+			border-color: @Blanco;
+			background-color: @Rojo;
+		}
+	}
+	&.btn-danger  {
+		background-color: @Rojo;
+		color: @Blanco;
+		border-color: @Rojo;
+		&:hover {
+			color: @Turquesa;
+			border-color: @Turquesa;
+			background-color: @Blanco;
+		}
+	}
+	margin-top: 15px;
+	margin-bottom: 15px;
+	.bold;
+	font-size: 20px;
+}
+
+//General
+.social-icons {
+	i {
+		color: @Rojo;
+		background-color: @Blanco;
+		padding: 5px;
+		margin: 6px 3px;
+		border-radius: 8px;
+		font-size: 20px;
+		min-width: 35px;
+		min-height: 20px;
+		line-height: 20px;
+		text-align: center;
+	}
+	text-align: right;
+}
+p {
+	font-size: 18px;
+}
+
+//Secciones
+#menu-bar {
+	.navbar-brand .text-hide {
+		background-image: url(../img/logo-vitacode-400.png);
+		width: 350px;
+		height: 80px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	a.store {
+		.screen-md-min({
+			color: @Blanco !important;
+			background-color: @Turquesa !important;
+			border-radius: 5px;
+			padding: 10px 15px;
+			margin-left: 18px;
+			&:hover {
+				color: @Blanco !important;
+				background-color: @Rojo !important;
+			}
+			});
+		.screen-sm-max({
+			color: @Turquesa !important;
+			text-transform: uppercase;
+			.bold;
+			&:hover {
+				color: @Rojo !important;
+			}
+			});
+	}
+}
+#que {
+	.fa-question-circle {
+		position: relative;
+		left: -50px;
+		top: 50px;
+	}
+}
+#tips {
+	background-image: url(' ../img/qrbackground.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	div.fa {
+		color: @Rojo;
+		font-size: 80px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+	}
+	h2, h3, p {
+		color: @Blanco;
+	}
+	h2 {
+		.bold;
+		padding-bottom: 40px;
+		padding-top: 50px;
+	}
+	h3 {
+		.bold;
+		padding-bottom: 10px;
+		margin-bottom: 0;
+	}
+	p {
+		padding: 10px 25px;
+	}
+	#video-background {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		min-width: 90%;
+		min-height: 90%;
+		width: 90%;
+		height: auto;
+		z-index: 1;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		background-size: cover;
+	}
+	#cover {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: 560px;
+		height: auto;
+		z-index: 999;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		display: block;
+		background-color: rgba(255,255,255,0);
+	}
+}
+#ejemplo {
+	.fa {
+		padding-bottom: 15px;
+	}
+	hr {
+		background-color: @Turquesa;
+		border-top: 6px solid @Turquesa;
+		width: 40%;
+		float: left;
+	}
+	h2 {
+		.screen-md-min ({
+			margin-left: 100px !important;
+			});
+	}
+	a.demo {
+		color: @Blanco;
+		&:hover {
+			color: @Turquesa;
+			text-decoration: none;
+			.bold;
+		}
+	}
+}
+footer {
+	padding-top: 50px;
+	p {
+		font-size: 14px;
+	}
+}
