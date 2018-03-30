@@ -271,6 +271,9 @@ p {
 			}
 			});
 	}
+	li.nav-item.active a {
+		color: @Turquesa;
+	}
 }
 #que {
 	.fa-question-circle {
@@ -401,8 +404,7 @@ footer {
 
 
 // FAQ
-#faq-header {
-	background-image: url('../img/faq.jpg');
+#faq-header, #contacto-header {
 	background-repeat: no-repeat;;
 	background-size: cover;
 	min-height: 300px;
@@ -416,6 +418,12 @@ footer {
 		font-size: 40px;
 		text-shadow: 3px 3px 8px rgba(0,0,0,.5);
 	}
+}
+#faq-header {
+	background-image: url('../img/faq.jpg');
+}
+#contacto-header {
+	background-image: url('../img/contacto.jpg');
 }
 
 #faq {

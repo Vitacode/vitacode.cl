@@ -141,6 +141,9 @@ p {
     color: #be0811 !important;
   }
 }
+#menu-bar li.nav-item.active a {
+  color: #0aa2ba;
+}
 #que .fa-question-circle {
   position: relative;
   left: -50px;
@@ -265,21 +268,29 @@ footer a:hover {
 #oz-scroll:hover {
   opacity: 1;
 }
-#faq-header {
-  background-image: url('../img/faq.jpg');
+#faq-header,
+#contacto-header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 300px;
 }
-#faq-header .row {
+#faq-header .row,
+#contacto-header .row {
   height: 100%;
   min-height: 300px;
 }
-#faq-header h2 {
+#faq-header h2,
+#contacto-header h2 {
   color: #ffffff;
   font-weight: 600;
   font-size: 40px;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+#faq-header {
+  background-image: url('../img/faq.jpg');
+}
+#contacto-header {
+  background-image: url('../img/contacto.jpg');
 }
 #faq a,
 #faq a:hover,
