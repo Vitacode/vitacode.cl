@@ -269,18 +269,21 @@ footer a:hover {
   opacity: 1;
 }
 #faq-header,
-#contacto-header {
+#contacto-header,
+#quienes-header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 300px;
 }
 #faq-header .row,
-#contacto-header .row {
+#contacto-header .row,
+#quienes-header .row {
   height: 100%;
   min-height: 300px;
 }
 #faq-header h2,
-#contacto-header h2 {
+#contacto-header h2,
+#quienes-header h2 {
   color: #ffffff;
   font-weight: 600;
   font-size: 40px;
@@ -291,6 +294,9 @@ footer a:hover {
 }
 #contacto-header {
   background-image: url('../img/contacto.jpg');
+}
+#quienes-header {
+  background-image: url('../img/quienes.jpg');
 }
 #faq a,
 #faq a:hover,
@@ -354,9 +360,8 @@ footer a:hover {
 }
 #faq .card-header h3 {
   margin: 0 0 0px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #0aa2ba;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
   padding-top: 15px;
 }
 #faq .card-block {
